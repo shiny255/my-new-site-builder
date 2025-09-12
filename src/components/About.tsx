@@ -12,22 +12,14 @@ const About = () => {
               <h3 className="text-xl text-muted-foreground mb-6">Who I am?</h3>
             </div>
             
-            <div className="text-lg leading-relaxed text-muted-foreground space-y-4">
+            <div className="text-lg leading-relaxed text-muted-foreground">
               <p>
-                My name is Shani K. Varun, a passionate cybersecurity professional with a strong focus on 
-                ethical hacking and security analysis. I thrive on solving complex security challenges and 
-                am dedicated to making digital systems more secure and resilient.
-              </p>
-              <p>
-                I am a quick learner with a self-motivated attitude, always eager to explore new 
-                cybersecurity technologies and enhance my skills. Currently pursuing dual degrees in 
-                Data Science from IIT Madras and Computer Science from Quantum University, specializing 
-                in cybersecurity and ethical hacking.
-              </p>
-              <p>
-                I am currently seeking job opportunities that align with my expertise in cybersecurity, 
-                penetration testing, and data-driven security applications. If you are looking for a 
-                versatile and driven security professional, let's connect!
+                My name is Shani Varun, I am a passionate cybersecurity professional specializing in 
+                ethical hacking and security analysis. I thrive on solving complex security challenges 
+                and continuously work on enhancing my expertise. Currently, I am pursuing dual degrees 
+                in Data Science at IIT Madras and Computer Science with a specialization in cybersecurity 
+                at Quantum University. I am seeking opportunities in cybersecurity, penetration testing, 
+                and data-driven security applications where I can contribute my skills and grow further.
               </p>
             </div>
           </div>

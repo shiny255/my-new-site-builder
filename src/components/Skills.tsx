@@ -1,34 +1,78 @@
 const Skills = () => {
   const skills = [
-    { name: "Java", category: "Programming" },
-    { name: "Python", category: "Programming" },
-    { name: "JavaScript", category: "Programming" },
-    { name: "C/C++", category: "Programming" },
-    { name: "SQL", category: "Database" },
-    { name: "PHP", category: "Programming" },
-    { name: "Burp Suite", category: "Security Tools" },
-    { name: "Metasploit", category: "Security Tools" },
-    { name: "Nmap", category: "Security Tools" },
-    { name: "Linux", category: "Operating Systems" },
-    { name: "Kali Linux", category: "Operating Systems" },
-    { name: "Ubuntu", category: "Operating Systems" },
-    { name: "Windows", category: "Operating Systems" },
-    { name: "Pandas", category: "Data Science" },
-    { name: "NumPy", category: "Data Science" },
-    { name: "NLP", category: "Data Science" },
-    { name: "Pygame", category: "Frameworks" },
-    { name: "ISO 27001", category: "Frameworks" },
-    { name: "NIST", category: "Frameworks" },
-    { name: "Wireshark", category: "Security Tools" },
-    { name: "Nessus", category: "Security Tools" },
-    { name: "Snort", category: "Security Tools" }
+    { 
+      name: "Java", 
+      icon: "☕", 
+      bgColor: "bg-orange-500",
+      iconBg: "bg-orange-100"
+    },
+    { 
+      name: "Python", 
+      icon: "🐍", 
+      bgColor: "bg-blue-500",
+      iconBg: "bg-blue-100"
+    },
+    { 
+      name: "JavaScript", 
+      icon: "JS", 
+      bgColor: "bg-yellow-500",
+      iconBg: "bg-yellow-100"
+    },
+    { 
+      name: "TypeScript", 
+      icon: "TS", 
+      bgColor: "bg-blue-600",
+      iconBg: "bg-blue-100"
+    },
+    { 
+      name: "C/C++", 
+      icon: "C++", 
+      bgColor: "bg-blue-700",
+      iconBg: "bg-blue-100"
+    },
+    { 
+      name: "SQL", 
+      icon: "🗄️", 
+      bgColor: "bg-indigo-500",
+      iconBg: "bg-indigo-100"
+    },
+    { 
+      name: "Burp Suite", 
+      icon: "🔒", 
+      bgColor: "bg-red-500",
+      iconBg: "bg-red-100"
+    },
+    { 
+      name: "Metasploit", 
+      icon: "⚡", 
+      bgColor: "bg-purple-500",
+      iconBg: "bg-purple-100"
+    },
+    { 
+      name: "Nmap", 
+      icon: "🗺️", 
+      bgColor: "bg-green-500",
+      iconBg: "bg-green-100"
+    },
+    { 
+      name: "Linux", 
+      icon: "🐧", 
+      bgColor: "bg-gray-800",
+      iconBg: "bg-gray-100"
+    },
+    { 
+      name: "Kali Linux", 
+      icon: "🐉", 
+      bgColor: "bg-gray-900",
+      iconBg: "bg-gray-100"
+    },
+    { 
+      name: "Wireshark", 
+      icon: "🦈", 
+      bgColor: "bg-blue-400",
+      iconBg: "bg-blue-100"
+    }
   ];
-
-  const categories = [...new Set(skills.map(skill => skill.category))];
-
-  const getSkillsByCategory = (category: string) => {
-    return skills.filter(skill => skill.category === category);
-  };
 
   return (
     <section id="skills" className="py-20 px-6">
@@ -37,42 +81,32 @@ const Skills = () => {
           <h2 className="text-4xl font-bold gradient-text">Skills</h2>
         </div>
 
-        <div className="space-y-12">
-          {categories.map((category, categoryIndex) => (
-            <div key={category} className="space-y-6">
-              <h3 className="text-2xl font-semibold text-center text-secondary">
-                {category}
-              </h3>
-              
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                {getSkillsByCategory(category).map((skill, index) => (
-                  <div
-                    key={skill.name}
-                    className="group"
-                    style={{
-                      animationDelay: `${(categoryIndex * 100) + (index * 100)}ms`
-                    }}
-                  >
-                    <div className="relative p-6 bg-muted/50 rounded-lg border border-border hover:border-primary/50 transition-all duration-300 hover:bg-muted/80 hover:shadow-glow cursor-pointer">
-                      <div className="flex flex-col items-center space-y-4">
-                        {/* Skill icon placeholder */}
-                        <div className="w-12 h-12 bg-gradient-primary/20 rounded-lg flex items-center justify-center group-hover:bg-gradient-primary/30 transition-colors">
-                          <div className="w-6 h-6 bg-gradient-primary rounded opacity-80"></div>
-                        </div>
-                        
-                        {/* Skill name */}
-                        <div className="text-center">
-                          <h4 className="font-medium text-foreground group-hover:text-primary transition-colors">
-                            {skill.name}
-                          </h4>
-                        </div>
-                      </div>
-
-                      {/* Hover effect */}
-                      <div className="absolute inset-0 rounded-lg bg-gradient-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
+          {skills.map((skill, index) => (
+            <div
+              key={skill.name}
+              className="group cursor-pointer"
+              style={{
+                animationDelay: `${index * 100}ms`
+              }}
+            >
+              <div className="relative p-6 bg-muted/30 rounded-xl border border-border/50 hover:border-primary/50 transition-all duration-300 hover:bg-muted/50 hover:shadow-glow hover:-translate-y-1">
+                <div className="flex flex-col items-center space-y-4">
+                  {/* Skill icon */}
+                  <div className={`w-16 h-16 rounded-lg flex items-center justify-center text-white font-bold text-lg ${skill.bgColor} group-hover:scale-110 transition-transform duration-300`}>
+                    {skill.icon}
                   </div>
-                ))}
+                  
+                  {/* Skill name */}
+                  <div className="text-center">
+                    <h4 className="font-medium text-foreground group-hover:text-primary transition-colors text-sm">
+                      {skill.name}
+                    </h4>
+                  </div>
+                </div>
+
+                {/* Hover effect overlay */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
               </div>
             </div>
           ))}

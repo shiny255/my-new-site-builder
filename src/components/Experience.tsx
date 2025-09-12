@@ -1,22 +1,22 @@
+import { User } from 'lucide-react';
+import experienceIllustration from '@/assets/experience-illustration.png';
+
 const Experience = () => {
   const experiences = [
     {
       period: "(Nov 2024 - Dec 2024)",
-      title: "Cybersecurity Intern",
+      title: "CYBERSECURITY INTERN",
       company: "Mastercard (Forage)",
-      description: "Investigated phishing attempts using Python and Linux tools, which improved awareness training and reduced phishing incidents. Assisted in incident response for APT detection using ISO 27001 standards, enhancing the organization's threat response capabilities."
     },
     {
       period: "(Oct 2024 - Nov 2024)", 
-      title: "Security Analyst Intern",
+      title: "SECURITY ANALYST INTERN",
       company: "Tata Cybersecurity (Forage)",
-      description: "Simulated Identity and Access Management (IAM) strategies to enhance security protocols. Identified vulnerabilities (e.g., misconfigured IAM roles) and prioritized remediation based on CVSS scores."
     },
     {
       period: "(Sep 2024 - Oct 2024)",
-      title: "Cybersecurity Intern", 
+      title: "CYBERSECURITY INTERN", 
       company: "Prodigy Infotech",
-      description: "Detected key logger threats using deep packet inspection with MITRE ATT&CK, enhancing system security. Identified 15+ vulnerabilities using Nessus and Snort, strengthening the security posture of the network."
     }
   ];
 
@@ -28,41 +28,57 @@ const Experience = () => {
           <h2 className="text-4xl font-bold gradient-text">Experiences</h2>
         </div>
 
-        <div className="space-y-12">
-          {experiences.map((exp, index) => (
-            <div key={index} className="relative">
-              <div className="flex flex-col lg:flex-row lg:items-center gap-8">
-                {/* Timeline dot */}
-                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2">
-                  <div className="w-4 h-4 bg-gradient-primary rounded-full shadow-glow"></div>
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left side - 3D Illustration */}
+          <div className="flex justify-center lg:justify-start">
+            <div className="relative">
+              <img 
+                src={experienceIllustration} 
+                alt="Cybersecurity Experience Illustration" 
+                className="w-full max-w-md animate-float"
+              />
+              {/* Floating decorative elements */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-primary rounded-full opacity-50 animate-float" style={{animationDelay: '1s'}}></div>
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-secondary rounded-full opacity-30 animate-float" style={{animationDelay: '3s'}}></div>
+            </div>
+          </div>
+
+          {/* Right side - Experience Cards */}
+          <div className="space-y-8">
+            {experiences.map((exp, index) => (
+              <div 
+                key={index} 
+                className="relative p-6 bg-muted/30 rounded-xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:bg-muted/50 group"
+                style={{
+                  animationDelay: `${index * 200}ms`
+                }}
+              >
+                {/* Time period */}
+                <div className="text-primary text-sm font-medium mb-3">
+                  {exp.period}
                 </div>
 
-                {/* Left side - Company info */}
-                <div className="lg:w-1/2 lg:text-right lg:pr-12">
-                  <div className="inline-flex items-center gap-3 mb-2">
-                    <div className="w-12 h-12 bg-gradient-primary/20 rounded-lg flex items-center justify-center animate-pulse-glow">
-                      <div className="w-6 h-6 bg-gradient-primary rounded opacity-80"></div>
-                    </div>
-                    <div>
-                      <div className="text-sm text-muted-foreground">{exp.period}</div>
-                    </div>
+                {/* Job title and company */}
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-primary/20 rounded-lg flex items-center justify-center group-hover:bg-gradient-primary/30 transition-colors">
+                    <User className="w-6 h-6 text-primary" />
+                  </div>
+                  
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                      {exp.title}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {exp.company}
+                    </p>
                   </div>
                 </div>
 
-                {/* Right side - Role details */}
-                <div className="lg:w-1/2 lg:pl-12">
-                  <h3 className="text-xl font-bold text-foreground mb-2">{exp.title}</h3>
-                  <h4 className="text-lg text-primary mb-4">{exp.company}</h4>
-                  <p className="text-muted-foreground leading-relaxed">{exp.description}</p>
-                </div>
+                {/* Hover effect overlay */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
               </div>
-
-              {/* Timeline line */}
-              {index < experiences.length - 1 && (
-                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 top-4 w-px h-16 bg-gradient-to-b from-primary/50 to-transparent"></div>
-              )}
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

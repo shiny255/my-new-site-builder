@@ -8,8 +8,8 @@ const Navigation = () => {
     { id: 'about', label: 'ABOUT' },
     { id: 'experience', label: 'EXPERIENCE' },
     { id: 'skills', label: 'SKILLS' },
-    { id: 'projects', label: 'PROJECTS' },
     { id: 'education', label: 'EDUCATION' },
+    { id: 'projects', label: 'PROJECTS' },
   ];
 
   useEffect(() => {
@@ -60,6 +60,14 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium transition-colors duration-300 hover:text-primary text-muted-foreground"
+            >
+              GET RESUME
+            </a>
           </div>
         </div>
       </div>

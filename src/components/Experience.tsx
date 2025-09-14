@@ -35,11 +35,11 @@ const Experience = () => {
               <img 
                 src={experienceIllustration} 
                 alt="Cybersecurity Experience Illustration" 
-                className="w-full max-w-md animate-float"
+                className="w-full max-w-md rounded-3xl"
               />
-              {/* Floating decorative elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-primary rounded-full opacity-50 animate-float" style={{animationDelay: '1s'}}></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-secondary rounded-full opacity-30 animate-float" style={{animationDelay: '3s'}}></div>
+              {/* Static decorative elements */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-primary rounded-full opacity-50"></div>
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-secondary rounded-full opacity-30"></div>
             </div>
           </div>
 

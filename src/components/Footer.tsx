@@ -21,7 +21,7 @@ const Footer = () => {
           {/* Social Links */}
           <div className="flex items-center space-x-4">
             <a
-              href="https://github.com/shanivarun2003"
+              href="https://github.com/shiny255"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 hover:bg-primary/10 rounded-md transition-colors"
@@ -30,7 +30,7 @@ const Footer = () => {
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="https://linkedin.com/in/shanivarun2003"
+              href="https://www.linkedin.com/in/shanikvarun/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 hover:bg-primary/10 rounded-md transition-colors"

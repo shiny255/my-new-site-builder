@@ -12,7 +12,7 @@ const About = () => {
               <h3 className="text-xl text-muted-foreground mb-6">Who I am?</h3>
             </div>
             
-            <div className="text-lg leading-relaxed text-muted-foreground">
+            <div className="text-base leading-relaxed text-muted-foreground">
               <p>
                 My name is Shani Varun, I am a passionate cybersecurity professional specializing in 
                 ethical hacking and security analysis. I thrive on solving complex security challenges 
@@ -34,9 +34,9 @@ const About = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              {/* Floating decorative element */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-primary rounded-full opacity-50 animate-float"></div>
-              <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-secondary rounded-full opacity-30 animate-float" style={{animationDelay: '2s'}}></div>
+              {/* Static decorative element */}
+              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-primary rounded-full opacity-50"></div>
+              <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-secondary rounded-full opacity-30"></div>
             </div>
           </div>
         </div>

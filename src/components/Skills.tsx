@@ -19,12 +19,6 @@ const Skills = () => {
       iconBg: "bg-yellow-100"
     },
     { 
-      name: "TypeScript", 
-      icon: "TS", 
-      bgColor: "bg-blue-600",
-      iconBg: "bg-blue-100"
-    },
-    { 
       name: "C/C++", 
       icon: "C++", 
       bgColor: "bg-blue-700",
@@ -49,28 +43,10 @@ const Skills = () => {
       iconBg: "bg-purple-100"
     },
     { 
-      name: "Nmap", 
-      icon: "🗺️", 
-      bgColor: "bg-green-500",
-      iconBg: "bg-green-100"
-    },
-    { 
       name: "Linux", 
       icon: "🐧", 
       bgColor: "bg-gray-800",
       iconBg: "bg-gray-100"
-    },
-    { 
-      name: "Kali Linux", 
-      icon: "🐉", 
-      bgColor: "bg-gray-900",
-      iconBg: "bg-gray-100"
-    },
-    { 
-      name: "Wireshark", 
-      icon: "🦈", 
-      bgColor: "bg-blue-400",
-      iconBg: "bg-blue-100"
     }
   ];
 

@@ -27,11 +27,11 @@ const Education = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left side - Illustration */}
           <div className="flex justify-center">
-            <div className="relative w-96 h-96 animate-float">
+            <div className="relative w-96 h-96">
               <img 
                 src={educationIllustration} 
                 alt="Education Illustration" 
-                className="w-full h-full object-contain drop-shadow-2xl"
+                className="w-full h-full object-contain drop-shadow-2xl rounded-2xl"
               />
             </div>
           </div>

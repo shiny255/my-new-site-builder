@@ -1,3 +1,5 @@
+import educationIllustration from '@/assets/education-illustration.png';
+
 const Education = () => {
   const education = [
     {
@@ -22,41 +24,34 @@ const Education = () => {
           <h2 className="text-4xl font-bold gradient-text">Education</h2>
         </div>
 
-        <div className="space-y-12">
-          {education.map((edu, index) => (
-            <div key={index} className="relative">
-              <div className="flex flex-col lg:flex-row lg:items-center gap-8">
-                {/* Timeline dot */}
-                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2">
-                  <div className="w-4 h-4 bg-gradient-primary rounded-full shadow-glow"></div>
-                </div>
-
-                {/* Left side - Period */}
-                <div className="lg:w-1/2 lg:text-right lg:pr-12">
-                  <div className="inline-flex items-center gap-3 mb-2">
-                    <div className="w-12 h-12 bg-gradient-primary/20 rounded-lg flex items-center justify-center animate-pulse-glow">
-                      <div className="w-6 h-6 bg-gradient-primary rounded opacity-80"></div>
-                    </div>
-                    <div>
-                      <div className="text-sm text-muted-foreground">{edu.period}</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Right side - Education details */}
-                <div className="lg:w-1/2 lg:pl-12">
-                  <h3 className="text-xl font-bold text-foreground mb-2">{edu.degree}</h3>
-                  <h4 className="text-lg text-primary mb-4">{edu.institution}</h4>
-                  <p className="text-muted-foreground leading-relaxed">{edu.description}</p>
-                </div>
-              </div>
-
-              {/* Timeline line */}
-              {index < education.length - 1 && (
-                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 top-4 w-px h-16 bg-gradient-to-b from-primary/50 to-transparent"></div>
-              )}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          {/* Left side - Illustration */}
+          <div className="flex justify-center">
+            <div className="relative w-96 h-96 animate-float">
+              <img 
+                src={educationIllustration} 
+                alt="Education Illustration" 
+                className="w-full h-full object-contain drop-shadow-2xl"
+              />
             </div>
-          ))}
+          </div>
+
+          {/* Right side - Education content */}
+          <div className="space-y-8">
+            <h3 className="text-2xl font-bold gradient-text-secondary mb-8">Academic Journey</h3>
+
+            {education.map((edu, index) => (
+              <div key={index} className="bg-muted/50 rounded-lg p-6 border border-border hover:border-primary/50 transition-all duration-300">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-3 h-3 bg-gradient-primary rounded-full"></div>
+                  <span className="text-sm text-muted-foreground font-medium">{edu.period}</span>
+                </div>
+                <h4 className="text-xl font-bold text-foreground mb-2">{edu.degree}</h4>
+                <h5 className="text-lg text-primary mb-3">{edu.institution}</h5>
+                <p className="text-muted-foreground leading-relaxed">{edu.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Certifications */}
